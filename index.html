@@ -14,63 +14,35 @@
             color: #333;
         }
 
-        header {
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .hero {
             background-color: #032B44;
-            color: #FFC400;
-            padding: 1rem;
+            color: #fff;
+            padding: 40px;
             text-align: center;
         }
 
-        header h1 {
-            font-size: 2.5rem;
+        .hero h1 {
+            font-size: 36px;
             font-weight: bold;
-            margin-bottom: 0.5rem;
+            margin-bottom: 10px;
         }
 
-        header p {
-            font-size: 1.2rem;
-            font-weight: normal;
+        .section {
+            margin-bottom: 40px;
         }
 
-        nav ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: space-around;
-        }
-
-        nav li {
-            margin-right: 20px;
-        }
-
-        nav a {
-            color: #fff;
-            text-decoration: none;
+        .section h2 {
+            font-size: 24px;
             font-weight: bold;
-        }
-
-        main {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 2rem;
-        }
-
-        section {
-            background-color: #fff;
-            padding: 1rem;
-            margin-bottom: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            width: 80%;
-            border: 1px solid #ddd;
-        }
-
-        h2 {
-            color: #032B44;
-            font-weight: bold;
-            font-size: 1.8rem;
-            margin-bottom: 0.5rem;
+            margin-bottom: 10px;
         }
 
         .btn {
@@ -86,54 +58,38 @@
         .btn:hover {
             background-color: #ffd700;
         }
-
-        footer {
-            background-color: #032B44;
-            color: #fff;
-            padding: 1rem;
-            text-align: center;
-            clear: both;
-        }
     </style>
 </head>
 <body>
-    <header>
+    <div class="hero">
         <h1>Bharath Srinivasan</h1>
         <p>Thought Leader & Consultant</p>
-        <nav>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section id="about">
+    </div>
+    <div class="container">
+        <div class="section">
             <h2>About Me</h2>
             <p>I'm Bharath Srinivasan, a seasoned thought leader and consultant with a passion for driving innovation and growth.</p>
             <a href="https://www.linkedin.com/in/srinibharath/" target="_blank" class="btn">Connect on LinkedIn</a>
-        </section>
-        <section id="services">
+        </div>
+        <div class="section">
             <h2>Services</h2>
-            <p>I offer a range of services designed to help businesses and individuals achieve their goals.</p>
             <ul>
                 <li>Strategy Development</li>
                 <li>Innovation Consulting</li>
                 <li>Growth Strategy</li>
                 <li>Digital Transformation</li>
             </ul>
-        </section>
-        <section id="contact">
+        </div>
+        <div class="section">
             <h2>Get in Touch</h2>
             <p>I'd love to hear from you and discuss how I can help you achieve your goals.</p>
-            <p>Email: <a href="mailto:srini.bharath@gmail.com">srini.bharath@gmail.com</a></p>
+            <p>Email: <a href="mailto:bharath.srinivasan@example.com">bharath.srinivasan@example.com</a></p>
             <div class="social-links">
                 <a href="https://www.linkedin.com/in/srinibharath/" target="_blank">LinkedIn</a>
             </div>
-        </section>
-    </main>
-    <footer>
+        </div>
+    </div>
+    <footer style="text-align: center; padding: 10px; background-color: #032B44; color: #fff;">
         <p>&copy; Srinibharath</p>
     </footer>
 </body>
