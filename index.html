@@ -5,108 +5,87 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Srinibharath - Home</title>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
     <style>
+        /* Add styles for the logo and favicon */
+        .logo {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: #032B44;
+            color: #FFC400;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 36px;
+            font-weight: bold;
+            animation: spin 10s linear infinite;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* Add styles for the animated background */
         body {
             font-family: 'Lato', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f2f7fa; /* Light blue-gray background */
-            color: #333;
+            background-image: linear-gradient(to bottom, #f2f7fa, #fff);
+            background-size: 100% 300px;
+            background-position: 0% 100%;
+            animation: gradient 10s ease infinite;
         }
 
-        header {
-            background-color: #032B44; /* Deep Blue */
-            color: #FFC400; /* Deeper gold tone */
-            padding: 1rem;
-            text-align: center;
+        @keyframes gradient {
+            0% {
+                background-position: 0% 100%;
+            }
+            50% {
+                background-position: 0% 0%;
+            }
+            100% {
+                background-position: 0% 100%;
+            }
         }
 
-        header h1 {
-            font-size: 2.5rem;
-            font-weight: bold;
-            margin-bottom: 0.5rem;
+        /* Add styles for scroll animations */
+        .section {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
         }
 
-        header p {
-            font-size: 1.2rem;
-            font-weight: normal;
+        .section.show {
+            opacity: 1;
+            transform: translateY(0);
         }
 
-        nav ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: space-around;
-        }
-
-        nav li {
-            margin-right: 20px;
-        }
-
-        nav a {
-            color: #fff;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        main {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 2rem;
-        }
-
-        section {
-            background-color: #fff;
-            padding: 1rem;
-            margin-bottom: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            width: 80%;
-            border: 1px solid #ddd;
-        }
-
-        h2 {
-            color: #032B44; /* Deep Blue */
-            font-weight: bold;
-            font-size: 1.8rem;
-            margin-bottom: 0.5rem;
-        }
-
+        /* Add styles for interactive elements */
         .btn {
-            background-color: #FFC400; /* Deeper gold tone */
-            color: #032B44; /* Deep Blue */
+            background-color: #FFC400;
+            color: #032B44;
             border: none;
             padding: 10px 20px;
             cursor: pointer;
             font-weight: bold;
             font-size: 1rem;
+            transition: background-color 0.2s ease;
         }
 
         .btn:hover {
-            background-color: #ffd700; /* Lighter Gold */
-        }
-
-        footer {
-            background-color: #032B44; /* Deep Blue */
-            color: #fff;
-            padding: 1rem;
-            text-align: center;
-            clear: both;
-        }
-
-        .social-links {
-            margin-top: 1rem;
-        }
-
-        .social-links a {
-            margin-right: 20px;
-            color: #032B44; /* Deep Blue */
+            background-color: #ffd700;
         }
     </style>
 </head>
 <body>
     <header>
+        <div class="logo">BS</div>
         <h1>Bharath Srinivasan</h1>
         <p>Thought Leader & Consultant</p>
         <nav>
@@ -118,14 +97,14 @@
         </nav>
     </header>
     <main>
-        <section id="about">
+        <section id="about" class="section">
             <h2>About Me</h2>
-            <p>I'm Bharath Srinivasan, a seasoned thought leader and consultant with a passion for driving innovation and growth. With years of experience in the industry, I've developed a unique perspective on what drives success and how to achieve it.</p>
+            <p>I'm Bharath Srinivasan, a seasoned thought leader and consultant with a passion for driving innovation and growth.</p>
             <a href="https://www.linkedin.com/in/srinibharath/" target="_blank" class="btn">Connect on LinkedIn</a>
         </section>
-        <section id="services">
+        <section id="services" class="section">
             <h2>Services</h2>
-            <p>I offer a range of services designed to help businesses and individuals achieve their goals. From strategy development to implementation and execution, I'm here to help.</p>
+            <p>I offer a range of services designed to help businesses and individuals achieve their goals.</p>
             <ul>
                 <li>Strategy Development</li>
                 <li>Innovation Consulting</li>
@@ -133,10 +112,10 @@
                 <li>Digital Transformation</li>
             </ul>
         </section>
-        <section id="contact">
+        <section id="contact" class="section">
             <h2>Get in Touch</h2>
             <p>I'd love to hear from you and discuss how I can help you achieve your goals.</p>
-            <p>Email: <a href="mailto:bharath.srinivasan@example.com">bharath.srinivasan@example.com</a></p>
+            <p>Email: <a href="mailto:srini.bharath@gmail.com">srini.bharath@gmail.com</a></p>
             <div class="social-links">
                 <a href="https://www.linkedin.com/in/srinibharath/" target="_blank">LinkedIn</a>
             </div>
@@ -145,5 +124,19 @@
     <footer>
         <p>&copy; Srinibharath</p>
     </footer>
+
+    <script>
+        // Add JavaScript code to trigger scroll animations
+        const sections = document.querySelectorAll('.section');
+
+        window.addEventListener('scroll', () => {
+            sections.forEach((section) => {
+                const rect = section.getBoundingClientRect();
+                if (rect.top < window.innerHeight) {
+                    section.classList.add('show');
+                }
+            });
+        });
+    </script>
 </body>
 </html>
