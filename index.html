@@ -3,35 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Srinibharath</title>
+    <title>Srinibharath - Home</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Montserrat', sans-serif;
             margin: 0;
             padding: 0;
+            background-color: #fff;
+            color: #333;
         }
 
         header {
-            background-color: #333;
-            color: #fff;
+            background-color: #032B44; /* Deep Blue */
+            color: #F8E231; /* Gold */
             padding: 1rem;
             text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            font-weight: normal;
         }
 
         nav ul {
             list-style: none;
             margin: 0;
             padding: 0;
+            display: flex;
+            justify-content: space-around;
         }
 
         nav li {
-            display: inline-block;
             margin-right: 20px;
         }
 
         nav a {
             color: #fff;
             text-decoration: none;
+            font-weight: bold;
         }
 
         main {
@@ -42,61 +57,88 @@
         }
 
         section {
-            background-color: #f7f7f7;
+            background-color: #fff;
             padding: 1rem;
             margin-bottom: 20px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             width: 80%;
+            border: 1px solid #ddd;
         }
 
-        h1, h2 {
-            color: #333;
+        h2 {
+            color: #032B44; /* Deep Blue */
+            font-weight: bold;
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
         }
 
-        button {
-            background-color: #333;
-            color: #fff;
+        .btn {
+            background-color: #F8E231; /* Gold */
+            color: #032B44; /* Deep Blue */
             border: none;
             padding: 10px 20px;
             cursor: pointer;
+            font-weight: bold;
+            font-size: 1rem;
         }
 
-        button:hover {
-            background-color: #555;
+        .btn:hover {
+            background-color: #ffd700; /* Lighter Gold */
         }
 
         footer {
-            background-color: #333;
+            background-color: #032B44; /* Deep Blue */
             color: #fff;
             padding: 1rem;
             text-align: center;
             clear: both;
         }
+
+        .social-links {
+            margin-top: 1rem;
+        }
+
+        .social-links a {
+            margin-right: 20px;
+            color: #032B44; /* Deep Blue */
+        }
     </style>
 </head>
 <body>
     <header>
+        <h1>Bharath Srinivasan</h1>
+        <p>Thought Leader & Consultant</p>
         <nav>
             <ul>
-                <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <section id="home">
-            <h1>Welcome to Srinibharath!</h1>
-            <p>Hello, I'm Srinibharath. Welcome to my website. I'm glad you're here!</p>
-            <button>Learn More</button>
-        </section>
         <section id="about">
             <h2>About Me</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla auctor, vestibulum magna sed, convallis ex.</p>
+            <p>I'm Bharath Srinivasan, a seasoned thought leader and consultant with a passion for driving innovation and growth. With years of experience in the industry, I've developed a unique perspective on what drives success and how to achieve it.</p>
+            <a href="https://www.linkedin.com/in/srinibharath/" target="_blank" class="btn">Connect on LinkedIn</a>
+        </section>
+        <section id="services">
+            <h2>Services</h2>
+            <p>I offer a range of services designed to help businesses and individuals achieve their goals. From strategy development to implementation and execution, I'm here to help.</p>
+            <ul>
+                <li>Strategy Development</li>
+                <li>Innovation Consulting</li>
+                <li>Growth Strategy</li>
+                <li>Digital Transformation</li>
+            </ul>
         </section>
         <section id="contact">
             <h2>Get in Touch</h2>
-            <p>Email: <a href="mailto:srinibharath@example.com">srinibharath@example.com</a></p>
+            <p>I'd love to hear from you and discuss how I can help you achieve your goals.</p>
+            <p>Email: <a href="mailto:bharath.srinivasan@example.com">bharath.srinivasan@example.com</a></p>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/srinibharath/" target="_blank">LinkedIn</a>
+            </div>
         </section>
     </main>
     <footer>
